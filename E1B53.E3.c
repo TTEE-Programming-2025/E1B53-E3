@@ -1,7 +1,7 @@
 #include<stdio.h>
     int main(){
     int password,attempts=0;
-    int choice;
+    int choice,num;
     for(int i=0;i<20;i++){
     printf("##########################\n");
     }
@@ -13,7 +13,7 @@
     }
     attempts++;
     if(attempts==3){
-    printf("密碼錯誤次數過多，系統結束。\n");
+    printf("密碼錯誤次數過多。\n");
     return 0;
     }
     }
@@ -25,11 +25,10 @@
     printf("d. Exit\n");
     printf("Enter your choice: ");
     scanf(" %c",&choice);
-    if(choice=='a'){
-    printf("\\123456789\n");
-    for(int i=8;i>=1;i--){ 
-    printf("%d-*********\n",i);
-    }
+    if(choice=='b'){
+    printf("你需要幾個座位(1~4)? ");
+    scanf("%d",&num);
+    printf("好的，安排%d個座位給你（實作略）\n",num);
     }else if(choice=='d'){
     break;
     }
